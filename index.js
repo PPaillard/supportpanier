@@ -11,5 +11,18 @@ class Article {
   }
 }
 
+class Panier {
+  constructor() {
+    this.articles = [];
+  }
+  ajouterArticle(article) {
+    this.articles.push(article);
+  }
+}
+
 const monArticle = new Article("Je suis un super article", 9.9, 95);
-console.log(monArticle);
+
+const monPanier = new Panier();
+monPanier.ajouterArticle(monArticle);
+
+console.log(monPanier);
